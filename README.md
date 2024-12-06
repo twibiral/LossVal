@@ -22,7 +22,7 @@ In general, loss functions used with LossVal are of the form:
 $$\text{LossVal} = \mathcal{L}_{w}(y, \hat{y}) \cdot \text{OT}_{w}(X_{train}, X_{val})^{2}$$
 
 The model's prediction is denoted by $\hat{y}$, while $y$ represents the target values. 
-The optimal transport distance $\text{OT_{w}}$ takes the features of the training data $X_{train}$ and validation data $X_{val}$ as input. 
+The optimal transport distance $\text{OT}_{w}$ takes the features of the training data $X_{train}$ and validation data $X_{val}$ as input. 
 For the target loss $\mathcal{L}_{w}$, we use instance-weighted formulations of existing loss functions, like a weighted cross-entropy loss or weighted mean-squared error loss (see below).
 
 Weighted cross-entropy loss:
