@@ -19,20 +19,20 @@ In our experiments, we show that LossVal achieves state-of-the-art performance o
 
 In general, loss functions used with LossVal are of the form:
 
-$$\text{LossVal} = \mathcal{L}_{w}(y, \hat{y}) \cdot \text{OT}_{w}(X_{train}, X_{val})^{2}$$
+$$\text{LossVal} = \mathcal{L}\_{w}(y, \hat{y}) \cdot \text{OT}\_{w}(X\_{train}, X\_{val})^{2}$$
 
 The model's prediction is denoted by $\hat{y}$, while $y$ represents the target values. 
-The optimal transport distance $\text{OT}_{w}$ takes the features of the training data $X_{train}$ and validation data $X_{val}$ as input. 
-For the target loss $\mathcal{L}_{w}$, we use instance-weighted formulations of existing loss functions, like a weighted cross-entropy loss or weighted mean-squared error loss (see below).
+The optimal transport distance $\text{OT}\_{w}$ takes the features of the training data $X\_{train}$ and validation data $X\_{val}$ as input. 
+For the target loss $\mathcal{L}\_{w}$, we use instance-weighted formulations of existing loss functions, like a weighted cross-entropy loss or weighted mean-squared error loss (see below).
 
 Weighted cross-entropy loss:
-$$\text{CE}_{w} = - \sum^{N}_{n=1} \left[ w_{n} \cdot \sum^{K}_{k=1} y_{n,k} \log(\hat y_{n,k}) \right]$$
+$$\text{CE}\_{w} = - \sum^{N}\_{n=1} \left[ w\_{n} \cdot \sum^{K}\_{k=1} y\_{n,k} \log(\hat y\_{n,k}) \right]$$
 
 Weighted mean-squared error loss:
-$$\text{MSE}_{w} = \sum^{N}_{n=1} w_{n} \cdot (y_{n} - \hat{y}_{n})^2$$
+$$\text{MSE}\_{w} = \sum^{N}\_{n=1} w\_{n} \cdot (y\_{n} - \hat{y}\_{n})^2$$
 
 Weighted optimal transport distance:
-$$\text{OT}_w(X_{train}, X_{val}) = \min_{\gamma \in \Pi(w, 1)} \sum_{n=1}^{N}\sum_{j=1}^{J} c(x_n, x_j) \, \gamma_{n,j}$$
+$$\text{OT}\_w(X\_{train}, X\_{val}) = \min\_{\gamma \in \Pi(w, 1)} \sum\_{n=1}^{N}\sum\_{j=1}^{J} c(x_n, x_j) \, \gamma\_{n,j}$$
 
 
 ## Use
